@@ -1,0 +1,62 @@
+{
+  "slug": "z-ai",
+  "provider": "Z.AI",
+  "source_url": "https://z.ai/",
+  "last_updated": "2026-09-27",
+  "models": [
+    {
+      "id": "z-ai-glm-5.3-flash-payg",
+      "name": "Z.AI GLM-5.3-Flash (API Directa)",
+      "type": "pay_as_you_go",
+      "provider": "Z.AI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.015,
+        "cache_miss": 0.075,
+        "output": 0.25
+      },
+      "model_type": "reasoning",
+      "context_length": 1310720,
+      "params_b": null,
+      "input_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "z-ai/glm-5.3-flash"
+    },
+    {
+      "id": "z-ai-glm-5.3-subscription",
+      "name": "Z.AI GLM-5.3 Flagship (Suscripción)",
+      "type": "credit_subscription",
+      "provider": "Z.AI",
+      "credit_formula_divisor": 10000,
+      "credit_multipliers": {
+        "cache_hit": 1.7,
+        "cache_miss": 6.9,
+        "output": 24
+      },
+      "tiers": [
+        {
+          "name": "Lite Plan",
+          "price_usd": 18,
+          "credits": 40000
+        },
+        {
+          "name": "Pro Plan",
+          "price_usd": 50,
+          "credits": 240000
+        },
+        {
+          "name": "Max Plan",
+          "price_usd": 100,
+          "credits": 560000
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "slug": "mistralai",
+  "provider": "Mistral",
+  "source_url": "https://docs.mistral.ai/inference/pricing",
+  "last_updated": "2026-09-28",
+  "models": [
+    {
+      "id": "mistralai-large-3",
+      "name": "Mistral Large 3",
+      "type": "pay_as_you_go",
+      "provider": "Mistral",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.05,
+        "cache_miss": 0.5,
+        "output": 1.5
+      },
+      "model_type": "multimodal",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false,
+      "context_length": 256000
+    },
+    {
+      "id": "mistralai-medium-3-5",
+      "name": "Mistral Medium 3.5",
+      "type": "pay_as_you_go",
+      "provider": "Mistral",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.15,
+        "cache_miss": 1.5,
+        "output": 7.5
+      },
+      "model_type": "multimodal",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "context_length": 256000
+    },
+    {
+      "id": "mistralai-small-4",
+      "name": "Mistral Small 4",
+      "type": "pay_as_you_go",
+      "provider": "Mistral",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.015,
+        "cache_miss": 0.15,
+        "output": 0.6
+      },
+      "model_type": "multimodal",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "context_length": 256000
+    },
+    {
+      "id": "mistralai-ministral-3-14b",
+      "name": "Mistral Ministral 3 14B",
+      "type": "pay_as_you_go",
+      "provider": "Mistral",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.02,
+        "cache_miss": 0.2,
+        "output": 0.2
+      },
+      "model_type": "multimodal",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false,
+      "context_length": 256000
+    },
+    {
+      "id": "mistralai-ministral-3-8b",
+      "name": "Mistral Ministral 3 8B",
+      "type": "pay_as_you_go",
+      "provider": "Mistral",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.015,
+        "cache_miss": 0.15,
+        "output": 0.15
+      },
+      "model_type": "multimodal",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false,
+      "context_length": 256000
+    },
+    {
+      "id": "mistralai-ministral-3-3b",
+      "name": "Mistral Ministral 3 3B",
+      "type": "pay_as_you_go",
+      "provider": "Mistral",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.01,
+        "cache_miss": 0.1,
+        "output": 0.1
+      },
+      "model_type": "multimodal",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false,
+      "context_length": 256000
+    },
+    {
+      "id": "mistralai-codestral",
+      "name": "Mistral Codestral",
+      "type": "pay_as_you_go",
+      "provider": "Mistral",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.03,
+        "cache_miss": 0.3,
+        "output": 0.9
+      },
+      "model_type": "chat",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false,
+      "context_length": 128000
+    }
+  ]
+}

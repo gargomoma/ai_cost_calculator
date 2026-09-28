@@ -1,0 +1,176 @@
+{
+  "slug": "x-ai",
+  "provider": "xAI",
+  "source_url": "https://docs.x.ai/docs/models",
+  "last_updated": "2026-09-28",
+  "models": [
+    {
+      "id": "x-ai-grok-4-7",
+      "name": "xAI Grok 4.7",
+      "type": "pay_as_you_go",
+      "provider": "xAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.5,
+        "cache_miss": 2,
+        "output": 6
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "context_length": 500000
+    },
+    {
+      "id": "x-ai-grok-4-6",
+      "name": "xAI Grok 4.6",
+      "type": "pay_as_you_go",
+      "provider": "xAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.5,
+        "cache_miss": 2,
+        "output": 6
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "context_length": 500000
+    },
+    {
+      "id": "x-ai-grok-4-5",
+      "name": "xAI Grok 4.5",
+      "type": "pay_as_you_go",
+      "provider": "xAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.3,
+        "cache_miss": 2,
+        "output": 6
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "context_length": 500000
+    },
+    {
+      "id": "x-ai-grok-4-3",
+      "name": "xAI Grok 4.3",
+      "type": "pay_as_you_go",
+      "provider": "xAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.2,
+        "cache_miss": 1.25,
+        "output": 2.5
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "context_length": 1000000
+    },
+    {
+      "id": "x-ai-grok-4-20-0309-reasoning",
+      "name": "xAI Grok 4.20 0309 Reasoning",
+      "type": "pay_as_you_go",
+      "provider": "xAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.2,
+        "cache_miss": 1.25,
+        "output": 2.5
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "context_length": 1000000
+    },
+    {
+      "id": "x-ai-grok-4-20-0309-non-reasoning",
+      "name": "xAI Grok 4.20 0309 Non-Reasoning",
+      "type": "pay_as_you_go",
+      "provider": "xAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.2,
+        "cache_miss": 1.25,
+        "output": 2.5
+      },
+      "model_type": "chat",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false,
+      "context_length": 1000000
+    },
+    {
+      "id": "x-ai-grok-build-0-1",
+      "name": "xAI Grok Build 0.1",
+      "type": "pay_as_you_go",
+      "provider": "xAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.2,
+        "cache_miss": 1,
+        "output": 2
+      },
+      "model_type": "chat",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false,
+      "context_length": 256000
+    },
+    {
+      "id": "x-ai-grok-4-20-multi-agent-0309",
+      "name": "xAI Grok 4.20 Multi-Agent 0309",
+      "type": "pay_as_you_go",
+      "provider": "xAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.2,
+        "cache_miss": 1.25,
+        "output": 2.5
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "context_length": 1000000
+    }
+  ]
+}

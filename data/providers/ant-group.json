@@ -1,0 +1,75 @@
+{
+  "slug": "ant-group",
+  "provider": "Ant Group / InclusionAI",
+  "source_url": "https://inclusionai.com/",
+  "last_updated": "2026-09-27",
+  "models": [
+    {
+      "id": "ant-group-ling-2.6-1t",
+      "name": "Ant-Group Ling-2.6-1T / Ring-2.6-1T",
+      "type": "pay_as_you_go",
+      "provider": "Ant Group / InclusionAI",
+      "currency": "CNY",
+      "daily_free_tokens": 500000,
+      "pricing_per_1m": {
+        "cache_hit": 0.9,
+        "cache_miss": 4.5,
+        "output": 18
+      },
+      "note": "Flagship MoE"
+    },
+    {
+      "id": "ant-group-ling-3.0-flash-promo",
+      "name": "Ant-Group Ling-3.0-flash (Promo Directa)",
+      "type": "pay_as_you_go",
+      "provider": "Ant Group / InclusionAI",
+      "currency": "CNY",
+      "daily_free_tokens": 500000,
+      "pricing_per_1m": {
+        "cache_hit": 0.1,
+        "cache_miss": 0.5,
+        "output": 1.5
+      },
+      "promo": {
+        "discount_pct": 75
+      },
+      "note": "Promo 75% off",
+      "model_type": "reasoning",
+      "context_length": 262144,
+      "params_b": null,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "inclusionai/ling-3.0-flash"
+    },
+    {
+      "id": "ant-group-ling-3.0-flash-standard",
+      "name": "Ant-Group Ling-3.0-flash (Precio Estándar)",
+      "type": "pay_as_you_go",
+      "provider": "Ant Group / InclusionAI",
+      "currency": "CNY",
+      "daily_free_tokens": 500000,
+      "pricing_per_1m": {
+        "cache_hit": 0.1,
+        "cache_miss": 0.5,
+        "output": 1.5
+      },
+      "note": "Sin promoción",
+      "model_type": "reasoning",
+      "context_length": 262144,
+      "params_b": null,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "inclusionai/ling-3.0-flash"
+    }
+  ]
+}

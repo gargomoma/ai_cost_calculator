@@ -1,0 +1,116 @@
+{
+  "slug": "amazon",
+  "provider": "Amazon",
+  "source_url": "https://aws.amazon.com/bedrock/pricing/",
+  "last_updated": "2026-09-28",
+  "models": [
+    {
+      "id": "amazon-nova-micro",
+      "name": "Amazon Nova Micro",
+      "type": "pay_as_you_go",
+      "provider": "Amazon",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.035,
+        "cache_miss": 0.035,
+        "output": 0.14
+      },
+      "model_type": "chat",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false
+    },
+    {
+      "id": "amazon-nova-lite",
+      "name": "Amazon Nova Lite",
+      "type": "pay_as_you_go",
+      "provider": "Amazon",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.06,
+        "cache_miss": 0.06,
+        "output": 0.24
+      },
+      "model_type": "multimodal",
+      "input_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false
+    },
+    {
+      "id": "amazon-nova-pro",
+      "name": "Amazon Nova Pro",
+      "type": "pay_as_you_go",
+      "provider": "Amazon",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.8,
+        "cache_miss": 0.8,
+        "output": 3.2
+      },
+      "model_type": "multimodal",
+      "input_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false
+    },
+    {
+      "id": "amazon-nova-premier",
+      "name": "Amazon Nova Premier",
+      "type": "pay_as_you_go",
+      "provider": "Amazon",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 2.5,
+        "cache_miss": 2.5,
+        "output": 12.5
+      },
+      "model_type": "multimodal",
+      "input_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false
+    },
+    {
+      "id": "amazon-nova-2-lite",
+      "name": "Amazon Nova 2 Lite",
+      "type": "pay_as_you_go",
+      "provider": "Amazon",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.3,
+        "cache_miss": 0.3,
+        "output": 2.5
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true
+    }
+  ]
+}

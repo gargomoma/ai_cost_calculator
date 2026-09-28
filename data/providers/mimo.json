@@ -1,0 +1,168 @@
+{
+  "slug": "mimo",
+  "provider": "Xiaomi MiMo",
+  "source_url": "https://mimo.chat/",
+  "last_updated": "2026-09-27",
+  "models": [
+    {
+      "id": "mimo-v2.5-pro-subscription",
+      "name": "Xiaomi MiMo (Model v2.5-Pro Flagship)",
+      "type": "credit_subscription",
+      "provider": "Xiaomi MiMo",
+      "credit_multipliers": {
+        "cache_hit": 2.5,
+        "cache_miss": 300,
+        "output": 600
+      },
+      "tiers": [
+        {
+          "name": "Lite",
+          "price_usd": 6,
+          "credits": 4100000000
+        },
+        {
+          "name": "Standard",
+          "price_usd": 16,
+          "credits": 11000000000
+        },
+        {
+          "name": "Pro",
+          "price_usd": 50,
+          "credits": 38000000000
+        },
+        {
+          "name": "Max",
+          "price_usd": 100,
+          "credits": 82000000000
+        }
+      ],
+      "note": "Subscription · Flagship, 3× credit rate vs Standard",
+      "model_type": "reasoning",
+      "context_length": 1050000,
+      "params_b": null,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "xiaomi/mimo-v2.5-pro"
+    },
+    {
+      "id": "mimo-v2.5-subscription",
+      "name": "Xiaomi MiMo (Model v2.5 Standard)",
+      "type": "credit_subscription",
+      "provider": "Xiaomi MiMo",
+      "credit_multipliers": {
+        "cache_hit": 2,
+        "cache_miss": 100,
+        "output": 200
+      },
+      "tiers": [
+        {
+          "name": "Lite",
+          "price_usd": 6,
+          "credits": 4100000000
+        },
+        {
+          "name": "Standard",
+          "price_usd": 16,
+          "credits": 11000000000
+        },
+        {
+          "name": "Pro",
+          "price_usd": 50,
+          "credits": 38000000000
+        },
+        {
+          "name": "Max",
+          "price_usd": 100,
+          "credits": 82000000000
+        }
+      ],
+      "note": "Subscription · Standard, 3× cheaper credits vs Pro"
+    },
+    {
+      "id": "mimo-v2.6-flash-realtime",
+      "name": "Xiaomi MiMo v2.6-Flash (Real-time API)",
+      "type": "pay_as_you_go",
+      "provider": "Xiaomi MiMo",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.0028,
+        "cache_miss": 0.14,
+        "output": 0.28
+      },
+      "note": "Real-time API",
+      "model_type": "reasoning",
+      "context_length": 1048576,
+      "params_b": null,
+      "input_modalities": [
+        "text",
+        "image",
+        "video",
+        "audio"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "xiaomi/mimo-v2.6-flash"
+    },
+    {
+      "id": "mimo-v2.6-pro-realtime",
+      "name": "Xiaomi MiMo v2.6-Pro (Real-time API)",
+      "type": "pay_as_you_go",
+      "provider": "Xiaomi MiMo",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.0036,
+        "cache_miss": 0.435,
+        "output": 0.87
+      },
+      "note": "Real-time API",
+      "model_type": "reasoning",
+      "context_length": 1050000,
+      "params_b": null,
+      "input_modalities": [
+        "text",
+        "image",
+        "video",
+        "audio"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "xiaomi/mimo-v2.6-pro"
+    },
+    {
+      "id": "mimo-v2.6-pro-ultraspeed-realtime",
+      "name": "Xiaomi MiMo v2.6-Pro UltraSpeed (Real-time API)",
+      "type": "pay_as_you_go",
+      "provider": "Xiaomi MiMo",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.036,
+        "cache_miss": 4.35,
+        "output": 8.7
+      },
+      "note": "Real-time API · UltraSpeed, 10× Pro price",
+      "model_type": "reasoning",
+      "context_length": 1048576,
+      "params_b": null,
+      "input_modalities": [
+        "text",
+        "image",
+        "video",
+        "audio"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "xiaomi/mimo-v2.6-pro-ultraspeed"
+    }
+  ]
+}

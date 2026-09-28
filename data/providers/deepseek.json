@@ -1,0 +1,104 @@
+{
+  "slug": "deepseek",
+  "provider": "DeepSeek",
+  "source_url": "https://platform.deepseek.com/",
+  "last_updated": "2026-09-27",
+  "models": [
+    {
+      "id": "deepseek-v4-flash-offpeak",
+      "name": "DeepSeek-V4-Flash (Off-Peak)",
+      "type": "pay_as_you_go",
+      "provider": "DeepSeek",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.003,
+        "cache_miss": 0.15,
+        "output": 0.6
+      },
+      "note": "Tarifa Fuera de Horas Punta",
+      "model_type": "reasoning",
+      "context_length": 1048576,
+      "params_b": null,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "deepseek/deepseek-v4-flash"
+    },
+    {
+      "id": "deepseek-v4-flash-peak",
+      "name": "DeepSeek-V4-Flash (Peak)",
+      "type": "pay_as_you_go",
+      "provider": "DeepSeek",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.006,
+        "cache_miss": 0.3,
+        "output": 1.2
+      },
+      "note": "Tarifa Horas Punta",
+      "model_type": "reasoning",
+      "context_length": 1048576,
+      "params_b": null,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "deepseek/deepseek-v4-flash"
+    },
+    {
+      "id": "deepseek-v4-pro-offpeak",
+      "name": "DeepSeek-V4-Pro (Flagship Off-Peak)",
+      "type": "pay_as_you_go",
+      "provider": "DeepSeek",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.022,
+        "cache_miss": 0.66,
+        "output": 1.98
+      },
+      "note": "Tarifa Fuera de Horas Punta",
+      "model_type": "reasoning",
+      "context_length": 1048576,
+      "params_b": null,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "deepseek/deepseek-v4-pro"
+    },
+    {
+      "id": "deepseek-v4-pro-peak",
+      "name": "DeepSeek-V4-Pro (Flagship Peak)",
+      "type": "pay_as_you_go",
+      "provider": "DeepSeek",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.044,
+        "cache_miss": 1.32,
+        "output": 3.96
+      },
+      "note": "Tarifa Horas Punta",
+      "model_type": "reasoning",
+      "context_length": 1048576,
+      "params_b": null,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "deepseek/deepseek-v4-pro"
+    }
+  ]
+}

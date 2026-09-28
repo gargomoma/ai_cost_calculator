@@ -1,0 +1,1008 @@
+{
+  "slug": "opencode-go",
+  "provider": "OpenCode Go",
+  "source_url": "https://opencode.ai/",
+  "last_updated": "2026-09-27",
+  "models": [
+    {
+      "id": "opencode-go-deepseek-v4-flash-offpeak",
+      "name": "OpenCode Go: DeepSeek V4 Flash (Off-Peak)",
+      "type": "hybrid_monetary_subscription",
+      "provider": "OpenCode Go",
+      "currency": "USD",
+      "subscription_price_usd": 10,
+      "included_dollars": 30,
+      "pricing_per_1m": {
+        "cache_hit": 0.003,
+        "cache_miss": 0.15,
+        "output": 0.6
+      },
+      "model_type": "reasoning",
+      "context_length": 1048576,
+      "params_b": null,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "deepseek/deepseek-v4-flash"
+    },
+    {
+      "id": "opencode-go-deepseek-v4-flash-peak",
+      "name": "OpenCode Go: DeepSeek V4 Flash (Peak)",
+      "type": "hybrid_monetary_subscription",
+      "provider": "OpenCode Go",
+      "currency": "USD",
+      "subscription_price_usd": 10,
+      "included_dollars": 30,
+      "pricing_per_1m": {
+        "cache_hit": 0.006,
+        "cache_miss": 0.3,
+        "output": 1.2
+      },
+      "model_type": "reasoning",
+      "context_length": 1048576,
+      "params_b": null,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "deepseek/deepseek-v4-flash"
+    },
+    {
+      "id": "opencode-go-deepseek-v4-flash-vision-exp-offpeak",
+      "name": "OpenCode Go: DeepSeek V4 Flash Vision Exp (Off-Peak)",
+      "type": "hybrid_monetary_subscription",
+      "provider": "OpenCode Go",
+      "currency": "USD",
+      "subscription_price_usd": 10,
+      "included_dollars": 15,
+      "pricing_per_1m": {
+        "cache_hit": 0.003,
+        "cache_miss": 0.15,
+        "output": 0.6
+      },
+      "model_type": "reasoning",
+      "context_length": 1048576,
+      "params_b": null,
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "deepseek/deepseek-v4-flash-vision-exp"
+    },
+    {
+      "id": "opencode-go-deepseek-v4-flash-vision-exp-peak",
+      "name": "OpenCode Go: DeepSeek V4 Flash Vision Exp (Peak)",
+      "type": "hybrid_monetary_subscription",
+      "provider": "OpenCode Go",
+      "currency": "USD",
+      "subscription_price_usd": 10,
+      "included_dollars": 15,
+      "pricing_per_1m": {
+        "cache_hit": 0.006,
+        "cache_miss": 0.3,
+        "output": 1.2
+      },
+      "model_type": "reasoning",
+      "context_length": 1048576,
+      "params_b": null,
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "deepseek/deepseek-v4-flash-vision-exp"
+    },
+    {
+      "id": "opencode-go-deepseek-v4-pro-offpeak",
+      "name": "OpenCode Go: DeepSeek V4 Pro (Off-Peak)",
+      "type": "hybrid_monetary_subscription",
+      "provider": "OpenCode Go",
+      "currency": "USD",
+      "subscription_price_usd": 10,
+      "included_dollars": 15,
+      "pricing_per_1m": {
+        "cache_hit": 0.022,
+        "cache_miss": 0.66,
+        "output": 1.98
+      },
+      "model_type": "reasoning",
+      "context_length": 1048576,
+      "params_b": null,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "deepseek/deepseek-v4-pro"
+    },
+    {
+      "id": "opencode-go-deepseek-v4-pro-peak",
+      "name": "OpenCode Go: DeepSeek V4 Pro (Peak)",
+      "type": "hybrid_monetary_subscription",
+      "provider": "OpenCode Go",
+      "currency": "USD",
+      "subscription_price_usd": 10,
+      "included_dollars": 15,
+      "pricing_per_1m": {
+        "cache_hit": 0.044,
+        "cache_miss": 1.32,
+        "output": 3.96
+      },
+      "model_type": "reasoning",
+      "context_length": 1048576,
+      "params_b": null,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "deepseek/deepseek-v4-pro"
+    },
+    {
+      "id": "opencode-go-deepseek-v4.1-flash-offpeak",
+      "name": "OpenCode Go: DeepSeek V4.1 Flash (Off-Peak)",
+      "type": "hybrid_monetary_subscription",
+      "provider": "OpenCode Go",
+      "currency": "USD",
+      "subscription_price_usd": 10,
+      "included_dollars": 60,
+      "pricing_per_1m": {
+        "cache_hit": 0.003,
+        "cache_miss": 0.15,
+        "output": 0.6
+      },
+      "model_type": "reasoning",
+      "context_length": 1048576,
+      "params_b": null,
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "deepseek/deepseek-v4.1-flash"
+    },
+    {
+      "id": "opencode-go-deepseek-v4.1-flash-peak",
+      "name": "OpenCode Go: DeepSeek V4.1 Flash (Peak)",
+      "type": "hybrid_monetary_subscription",
+      "provider": "OpenCode Go",
+      "currency": "USD",
+      "subscription_price_usd": 10,
+      "included_dollars": 60,
+      "pricing_per_1m": {
+        "cache_hit": 0.006,
+        "cache_miss": 0.3,
+        "output": 1.2
+      },
+      "model_type": "reasoning",
+      "context_length": 1048576,
+      "params_b": null,
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "deepseek/deepseek-v4.1-flash"
+    },
+    {
+      "id": "opencode-go-glm-5.1",
+      "name": "OpenCode Go: GLM-5.1",
+      "type": "hybrid_monetary_subscription",
+      "provider": "OpenCode Go",
+      "currency": "USD",
+      "subscription_price_usd": 10,
+      "included_dollars": 60,
+      "pricing_per_1m": {
+        "cache_hit": 0.26,
+        "cache_miss": 1.4,
+        "output": 4.4
+      }
+    },
+    {
+      "id": "opencode-go-glm-5.2",
+      "name": "OpenCode Go: GLM-5.2",
+      "type": "hybrid_monetary_subscription",
+      "provider": "OpenCode Go",
+      "currency": "USD",
+      "subscription_price_usd": 10,
+      "included_dollars": 60,
+      "pricing_per_1m": {
+        "cache_hit": 0.26,
+        "cache_miss": 1.4,
+        "output": 4.4
+      }
+    },
+    {
+      "id": "opencode-go-glm-5.3",
+      "name": "OpenCode Go: GLM-5.3",
+      "type": "hybrid_monetary_subscription",
+      "provider": "OpenCode Go",
+      "currency": "USD",
+      "subscription_price_usd": 10,
+      "included_dollars": 15,
+      "pricing_per_1m": {
+        "cache_hit": 0.26,
+        "cache_miss": 1.4,
+        "output": 4.4
+      }
+    },
+    {
+      "id": "opencode-go-glm-5.3-flash",
+      "name": "OpenCode Go: GLM-5.3-Flash",
+      "type": "hybrid_monetary_subscription",
+      "provider": "OpenCode Go",
+      "currency": "USD",
+      "subscription_price_usd": 10,
+      "included_dollars": 60,
+      "pricing_per_1m": {
+        "cache_hit": 0.03,
+        "cache_miss": 0.15,
+        "output": 0.5
+      },
+      "model_type": "reasoning",
+      "context_length": 1310720,
+      "params_b": null,
+      "input_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "z-ai/glm-5.3-flash"
+    },
+    {
+      "id": "opencode-go-gpt-5.6-luna-gt272k",
+      "name": "OpenCode Go: GPT 5.6 Luna (> 272K)",
+      "type": "hybrid_monetary_subscription",
+      "provider": "OpenCode Go",
+      "currency": "USD",
+      "subscription_price_usd": 10,
+      "included_dollars": 15,
+      "pricing_per_1m": {
+        "cache_hit": 0.04,
+        "cache_miss": 0.4,
+        "output": 1.8,
+        "cache_write": 0.5
+      },
+      "model_type": "reasoning",
+      "context_length": 1050000,
+      "params_b": null,
+      "input_modalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "openai/gpt-5.6-luna"
+    },
+    {
+      "id": "opencode-go-gpt-5.6-luna-le272k",
+      "name": "OpenCode Go: GPT 5.6 Luna (<= 272K)",
+      "type": "hybrid_monetary_subscription",
+      "provider": "OpenCode Go",
+      "currency": "USD",
+      "subscription_price_usd": 10,
+      "included_dollars": 15,
+      "pricing_per_1m": {
+        "cache_hit": 0.02,
+        "cache_miss": 0.2,
+        "output": 1.2,
+        "cache_write": 0.25
+      },
+      "model_type": "reasoning",
+      "context_length": 1050000,
+      "params_b": null,
+      "input_modalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "openai/gpt-5.6-luna"
+    },
+    {
+      "id": "opencode-go-gpt-6-luna-gt272k",
+      "name": "OpenCode Go: GPT 6 Luna (> 272K)",
+      "type": "hybrid_monetary_subscription",
+      "provider": "OpenCode Go",
+      "currency": "USD",
+      "subscription_price_usd": 10,
+      "included_dollars": 15,
+      "pricing_per_1m": {
+        "cache_hit": 0.02,
+        "cache_miss": 0.2,
+        "output": 0.75,
+        "cache_write": 0.25
+      },
+      "model_type": "reasoning",
+      "context_length": 1050000,
+      "params_b": null,
+      "input_modalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "openai/gpt-6-luna"
+    },
+    {
+      "id": "opencode-go-gpt-6-luna-le272k",
+      "name": "OpenCode Go: GPT 6 Luna (<= 272K)",
+      "type": "hybrid_monetary_subscription",
+      "provider": "OpenCode Go",
+      "currency": "USD",
+      "subscription_price_usd": 10,
+      "included_dollars": 15,
+      "pricing_per_1m": {
+        "cache_hit": 0.01,
+        "cache_miss": 0.1,
+        "output": 0.5,
+        "cache_write": 0.125
+      },
+      "model_type": "reasoning",
+      "context_length": 1050000,
+      "params_b": null,
+      "input_modalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "openai/gpt-6-luna"
+    },
+    {
+      "id": "opencode-go-grok-4.6-gt200k",
+      "name": "OpenCode Go: Grok 4.6 (> 200K)",
+      "type": "hybrid_monetary_subscription",
+      "provider": "OpenCode Go",
+      "currency": "USD",
+      "subscription_price_usd": 10,
+      "included_dollars": 15,
+      "pricing_per_1m": {
+        "cache_hit": 1,
+        "cache_miss": 4,
+        "output": 12
+      }
+    },
+    {
+      "id": "opencode-go-grok-4.6-le200k",
+      "name": "OpenCode Go: Grok 4.6 (<= 200K)",
+      "type": "hybrid_monetary_subscription",
+      "provider": "OpenCode Go",
+      "currency": "USD",
+      "subscription_price_usd": 10,
+      "included_dollars": 15,
+      "pricing_per_1m": {
+        "cache_hit": 0.5,
+        "cache_miss": 2,
+        "output": 6
+      }
+    },
+    {
+      "id": "opencode-go-grok-4.7-gt200k",
+      "name": "OpenCode Go: Grok 4.7 (> 200K)",
+      "type": "hybrid_monetary_subscription",
+      "provider": "OpenCode Go",
+      "currency": "USD",
+      "subscription_price_usd": 10,
+      "included_dollars": 15,
+      "pricing_per_1m": {
+        "cache_hit": 1,
+        "cache_miss": 4,
+        "output": 12
+      }
+    },
+    {
+      "id": "opencode-go-grok-4.7-le200k",
+      "name": "OpenCode Go: Grok 4.7 (<= 200K)",
+      "type": "hybrid_monetary_subscription",
+      "provider": "OpenCode Go",
+      "currency": "USD",
+      "subscription_price_usd": 10,
+      "included_dollars": 15,
+      "pricing_per_1m": {
+        "cache_hit": 0.5,
+        "cache_miss": 2,
+        "output": 6
+      }
+    },
+    {
+      "id": "opencode-go-hy3",
+      "name": "OpenCode Go: Hy3",
+      "type": "hybrid_monetary_subscription",
+      "provider": "OpenCode Go",
+      "currency": "USD",
+      "subscription_price_usd": 10,
+      "included_dollars": 60,
+      "pricing_per_1m": {
+        "cache_hit": 0.035,
+        "cache_miss": 0.14,
+        "output": 0.58
+      }
+    },
+    {
+      "id": "opencode-go-hy4-preview",
+      "name": "OpenCode Go: Hy4 Preview",
+      "type": "hybrid_monetary_subscription",
+      "provider": "OpenCode Go",
+      "currency": "USD",
+      "subscription_price_usd": 10,
+      "included_dollars": 30,
+      "pricing_per_1m": {
+        "cache_hit": 0.042,
+        "cache_miss": 0.834,
+        "output": 2.501
+      },
+      "model_type": "reasoning",
+      "context_length": 1048576,
+      "params_b": null,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "tencent/hy4-preview"
+    },
+    {
+      "id": "opencode-go-kimi-k2.6",
+      "name": "OpenCode Go: Kimi K2.6",
+      "type": "hybrid_monetary_subscription",
+      "provider": "OpenCode Go",
+      "currency": "USD",
+      "subscription_price_usd": 10,
+      "included_dollars": 60,
+      "pricing_per_1m": {
+        "cache_hit": 0.16,
+        "cache_miss": 0.95,
+        "output": 4
+      }
+    },
+    {
+      "id": "opencode-go-kimi-k2.7-code",
+      "name": "OpenCode Go: Kimi K2.7 Code",
+      "type": "hybrid_monetary_subscription",
+      "provider": "OpenCode Go",
+      "currency": "USD",
+      "subscription_price_usd": 10,
+      "included_dollars": 60,
+      "pricing_per_1m": {
+        "cache_hit": 0.19,
+        "cache_miss": 0.95,
+        "output": 4
+      },
+      "model_type": "reasoning",
+      "context_length": 262144,
+      "params_b": null,
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "moonshotai/kimi-k2.7-code"
+    },
+    {
+      "id": "opencode-go-kimi-k3",
+      "name": "OpenCode Go: Kimi K3",
+      "type": "hybrid_monetary_subscription",
+      "provider": "OpenCode Go",
+      "currency": "USD",
+      "subscription_price_usd": 10,
+      "included_dollars": 15,
+      "pricing_per_1m": {
+        "cache_hit": 0.3,
+        "cache_miss": 3,
+        "output": 15
+      }
+    },
+    {
+      "id": "opencode-go-longcat-2.0",
+      "name": "OpenCode Go: LongCat-2.0",
+      "type": "hybrid_monetary_subscription",
+      "provider": "OpenCode Go",
+      "currency": "USD",
+      "subscription_price_usd": 10,
+      "included_dollars": 60,
+      "pricing_per_1m": {
+        "cache_hit": 0.006,
+        "cache_miss": 0.3,
+        "output": 1.2
+      },
+      "model_type": "reasoning",
+      "context_length": 1048756,
+      "params_b": null,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "meituan/longcat-2.0"
+    },
+    {
+      "id": "opencode-go-longcat-2.5-preview-free",
+      "name": "OpenCode Go: LongCat 2.5 Preview Free",
+      "type": "hybrid_monetary_subscription",
+      "provider": "OpenCode Go",
+      "currency": "USD",
+      "subscription_price_usd": 10,
+      "included_dollars": 999999,
+      "pricing_per_1m": {
+        "cache_hit": 0,
+        "cache_miss": 0,
+        "output": 0
+      },
+      "note": "Gratis por tiempo limitado"
+    },
+    {
+      "id": "opencode-go-mimo-v2.5",
+      "name": "OpenCode Go: MiMo-V2.5",
+      "type": "hybrid_monetary_subscription",
+      "provider": "OpenCode Go",
+      "currency": "USD",
+      "subscription_price_usd": 10,
+      "included_dollars": 60,
+      "pricing_per_1m": {
+        "cache_hit": 0.0028,
+        "cache_miss": 0.14,
+        "output": 0.28
+      }
+    },
+    {
+      "id": "opencode-go-mimo-v2.5-pro",
+      "name": "OpenCode Go: MiMo-V2.5-Pro",
+      "type": "hybrid_monetary_subscription",
+      "provider": "OpenCode Go",
+      "currency": "USD",
+      "subscription_price_usd": 10,
+      "included_dollars": 15,
+      "pricing_per_1m": {
+        "cache_hit": 0.003625,
+        "cache_miss": 0.435,
+        "output": 0.87
+      },
+      "model_type": "reasoning",
+      "context_length": 1050000,
+      "params_b": null,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "xiaomi/mimo-v2.5-pro"
+    },
+    {
+      "id": "opencode-go-mimo-v2.6-flash",
+      "name": "OpenCode Go: MiMo-V2.6-Flash",
+      "type": "hybrid_monetary_subscription",
+      "provider": "OpenCode Go",
+      "currency": "USD",
+      "subscription_price_usd": 10,
+      "included_dollars": 60,
+      "pricing_per_1m": {
+        "cache_hit": 0.0028,
+        "cache_miss": 0.14,
+        "output": 0.28
+      },
+      "model_type": "reasoning",
+      "context_length": 1048576,
+      "params_b": null,
+      "input_modalities": [
+        "text",
+        "image",
+        "video",
+        "audio"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "xiaomi/mimo-v2.6-flash"
+    },
+    {
+      "id": "opencode-go-mimo-v2.6-pro",
+      "name": "OpenCode Go: MiMo-V2.6-Pro",
+      "type": "hybrid_monetary_subscription",
+      "provider": "OpenCode Go",
+      "currency": "USD",
+      "subscription_price_usd": 10,
+      "included_dollars": 15,
+      "pricing_per_1m": {
+        "cache_hit": 0.003625,
+        "cache_miss": 0.435,
+        "output": 0.87
+      },
+      "model_type": "reasoning",
+      "context_length": 1050000,
+      "params_b": null,
+      "input_modalities": [
+        "text",
+        "image",
+        "video",
+        "audio"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "xiaomi/mimo-v2.6-pro"
+    },
+    {
+      "id": "opencode-go-minimax-m2.5",
+      "name": "OpenCode Go: MiniMax M2.5",
+      "type": "hybrid_monetary_subscription",
+      "provider": "OpenCode Go",
+      "currency": "USD",
+      "subscription_price_usd": 10,
+      "included_dollars": 60,
+      "pricing_per_1m": {
+        "cache_hit": 0.06,
+        "cache_miss": 0.3,
+        "output": 1.2,
+        "cache_write": 0.375
+      },
+      "model_type": "reasoning",
+      "context_length": 204800,
+      "params_b": null,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "minimax/minimax-m2.5"
+    },
+    {
+      "id": "opencode-go-minimax-m2.7",
+      "name": "OpenCode Go: MiniMax M2.7",
+      "type": "hybrid_monetary_subscription",
+      "provider": "OpenCode Go",
+      "currency": "USD",
+      "subscription_price_usd": 10,
+      "included_dollars": 60,
+      "pricing_per_1m": {
+        "cache_hit": 0.06,
+        "cache_miss": 0.3,
+        "output": 1.2,
+        "cache_write": 0.375
+      },
+      "model_type": "reasoning",
+      "context_length": 204800,
+      "params_b": null,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "minimax/minimax-m2.7"
+    },
+    {
+      "id": "opencode-go-minimax-m3",
+      "name": "OpenCode Go: MiniMax M3",
+      "type": "hybrid_monetary_subscription",
+      "provider": "OpenCode Go",
+      "currency": "USD",
+      "subscription_price_usd": 10,
+      "included_dollars": 60,
+      "pricing_per_1m": {
+        "cache_hit": 0.06,
+        "cache_miss": 0.3,
+        "output": 1.2
+      },
+      "model_type": "reasoning",
+      "context_length": 1048576,
+      "params_b": null,
+      "input_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "minimax/minimax-m3"
+    },
+    {
+      "id": "opencode-go-muse-spark-1.2-contributor",
+      "name": "OpenCode Go: Muse Spark 1.2 Contributor",
+      "type": "hybrid_monetary_subscription",
+      "provider": "OpenCode Go",
+      "currency": "USD",
+      "subscription_price_usd": 10,
+      "included_dollars": 60,
+      "pricing_per_1m": {
+        "cache_hit": 0.002,
+        "cache_miss": 0.1,
+        "output": 0.2
+      },
+      "model_type": "reasoning",
+      "context_length": 1048576,
+      "params_b": null,
+      "input_modalities": [
+        "text",
+        "image",
+        "video",
+        "file",
+        "audio"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "meta/muse-spark-1.2-contributor"
+    },
+    {
+      "id": "opencode-go-muse-spark-1.3-contributor",
+      "name": "OpenCode Go: Muse Spark 1.3 Contributor",
+      "type": "hybrid_monetary_subscription",
+      "provider": "OpenCode Go",
+      "currency": "USD",
+      "subscription_price_usd": 10,
+      "included_dollars": 60,
+      "pricing_per_1m": {
+        "cache_hit": 0.002,
+        "cache_miss": 0.1,
+        "output": 0.2
+      },
+      "model_type": "reasoning",
+      "context_length": 1048576,
+      "params_b": null,
+      "input_modalities": [
+        "text",
+        "image",
+        "video",
+        "file",
+        "audio"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "meta/muse-spark-1.3-contributor"
+    },
+    {
+      "id": "opencode-go-qwen3.6-plus-gt256k",
+      "name": "OpenCode Go: Qwen3.6 Plus (> 256K)",
+      "type": "hybrid_monetary_subscription",
+      "provider": "OpenCode Go",
+      "currency": "USD",
+      "subscription_price_usd": 10,
+      "included_dollars": 60,
+      "pricing_per_1m": {
+        "cache_hit": 0.2,
+        "cache_miss": 2,
+        "output": 6,
+        "cache_write": 2.5
+      },
+      "model_type": "reasoning",
+      "context_length": 1000000,
+      "params_b": null,
+      "input_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "qwen/qwen3.6-plus"
+    },
+    {
+      "id": "opencode-go-qwen3.6-plus-le256k",
+      "name": "OpenCode Go: Qwen3.6 Plus (<= 256K)",
+      "type": "hybrid_monetary_subscription",
+      "provider": "OpenCode Go",
+      "currency": "USD",
+      "subscription_price_usd": 10,
+      "included_dollars": 60,
+      "pricing_per_1m": {
+        "cache_hit": 0.05,
+        "cache_miss": 0.5,
+        "output": 3,
+        "cache_write": 0.625
+      },
+      "model_type": "reasoning",
+      "context_length": 1000000,
+      "params_b": null,
+      "input_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "qwen/qwen3.6-plus"
+    },
+    {
+      "id": "opencode-go-qwen3.7-max",
+      "name": "OpenCode Go: Qwen3.7 Max",
+      "type": "hybrid_monetary_subscription",
+      "provider": "OpenCode Go",
+      "currency": "USD",
+      "subscription_price_usd": 10,
+      "included_dollars": 30,
+      "pricing_per_1m": {
+        "cache_hit": 0.5,
+        "cache_miss": 2.5,
+        "output": 7.5,
+        "cache_write": 3.125
+      },
+      "model_type": "reasoning",
+      "context_length": 1000000,
+      "params_b": null,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "qwen/qwen3.7-max"
+    },
+    {
+      "id": "opencode-go-qwen3.7-plus-gt256k",
+      "name": "OpenCode Go: Qwen3.7 Plus (> 256K)",
+      "type": "hybrid_monetary_subscription",
+      "provider": "OpenCode Go",
+      "currency": "USD",
+      "subscription_price_usd": 10,
+      "included_dollars": 60,
+      "pricing_per_1m": {
+        "cache_hit": 0.12,
+        "cache_miss": 1.2,
+        "output": 4.8,
+        "cache_write": 1.5
+      },
+      "model_type": "reasoning",
+      "context_length": 1000000,
+      "params_b": null,
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "qwen/qwen3.7-plus"
+    },
+    {
+      "id": "opencode-go-qwen3.7-plus-le256k",
+      "name": "OpenCode Go: Qwen3.7 Plus (<= 256K)",
+      "type": "hybrid_monetary_subscription",
+      "provider": "OpenCode Go",
+      "currency": "USD",
+      "subscription_price_usd": 10,
+      "included_dollars": 60,
+      "pricing_per_1m": {
+        "cache_hit": 0.04,
+        "cache_miss": 0.4,
+        "output": 1.6,
+        "cache_write": 0.5
+      },
+      "model_type": "reasoning",
+      "context_length": 1000000,
+      "params_b": null,
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "qwen/qwen3.7-plus"
+    },
+    {
+      "id": "opencode-go-qwen3.8-flash",
+      "name": "OpenCode Go: Qwen3.8 Flash",
+      "type": "hybrid_monetary_subscription",
+      "provider": "OpenCode Go",
+      "currency": "USD",
+      "subscription_price_usd": 10,
+      "included_dollars": 30,
+      "pricing_per_1m": {
+        "cache_hit": 0.016,
+        "cache_miss": 0.15,
+        "output": 0.47,
+        "cache_write": 0.2
+      },
+      "model_type": "reasoning",
+      "context_length": 1000000,
+      "params_b": null,
+      "input_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "qwen/qwen3.8-flash"
+    },
+    {
+      "id": "opencode-go-qwen3.8-max",
+      "name": "OpenCode Go: Qwen3.8 Max",
+      "type": "hybrid_monetary_subscription",
+      "provider": "OpenCode Go",
+      "currency": "USD",
+      "subscription_price_usd": 10,
+      "included_dollars": 15,
+      "pricing_per_1m": {
+        "cache_hit": 0.25,
+        "cache_miss": 2,
+        "output": 6,
+        "cache_write": 2.5
+      }
+    },
+    {
+      "id": "opencode-go-space-bunny-free",
+      "name": "OpenCode Go: Space Bunny Free",
+      "type": "hybrid_monetary_subscription",
+      "provider": "OpenCode Go",
+      "currency": "USD",
+      "subscription_price_usd": 10,
+      "included_dollars": 999999,
+      "pricing_per_1m": {
+        "cache_hit": 0,
+        "cache_miss": 0,
+        "output": 0
+      },
+      "note": "Gratis por tiempo limitado"
+    }
+  ]
+}

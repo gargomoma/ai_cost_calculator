@@ -1,0 +1,134 @@
+{
+  "slug": "cohere",
+  "provider": "Cohere",
+  "source_url": "https://cohere.com/pricing",
+  "last_updated": "2026-09-28",
+  "models": [
+    {
+      "id": "cohere-command",
+      "name": "Cohere Command",
+      "type": "pay_as_you_go",
+      "provider": "Cohere",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 1,
+        "cache_miss": 1,
+        "output": 2
+      },
+      "model_type": "chat",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false,
+      "context_length": 4096
+    },
+    {
+      "id": "cohere-command-light",
+      "name": "Cohere Command Light",
+      "type": "pay_as_you_go",
+      "provider": "Cohere",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.3,
+        "cache_miss": 0.3,
+        "output": 0.6
+      },
+      "model_type": "chat",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false,
+      "context_length": 4096
+    },
+    {
+      "id": "cohere-command-r-03-2024",
+      "name": "Cohere Command R 03-2024",
+      "type": "pay_as_you_go",
+      "provider": "Cohere",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.5,
+        "cache_miss": 0.5,
+        "output": 1.5
+      },
+      "model_type": "chat",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false,
+      "context_length": 128000
+    },
+    {
+      "id": "cohere-command-r-plus-04-2024",
+      "name": "Cohere Command R+ 04-2024",
+      "type": "pay_as_you_go",
+      "provider": "Cohere",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 3,
+        "cache_miss": 3,
+        "output": 15
+      },
+      "model_type": "chat",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false,
+      "context_length": 128000
+    },
+    {
+      "id": "cohere-command-r-plus-08-2024",
+      "name": "Cohere Command R+ 08-2024",
+      "type": "pay_as_you_go",
+      "provider": "Cohere",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 2.5,
+        "cache_miss": 2.5,
+        "output": 10
+      },
+      "model_type": "chat",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false,
+      "context_length": 128000
+    },
+    {
+      "id": "cohere-aya-expanse-32b",
+      "name": "Cohere Aya Expanse 32B",
+      "type": "pay_as_you_go",
+      "provider": "Cohere",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.5,
+        "cache_miss": 0.5,
+        "output": 1.5
+      },
+      "model_type": "chat",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false,
+      "context_length": 128000
+    }
+  ]
+}

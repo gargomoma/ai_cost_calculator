@@ -1,0 +1,325 @@
+{
+  "slug": "microsoft",
+  "provider": "Microsoft",
+  "source_url": "https://azure.microsoft.com/en-us/pricing/details/ai-foundry-models/microsoft/",
+  "last_updated": "2026-09-28",
+  "models": [
+    {
+      "id": "microsoft-phi-3-mini-4k-instruct",
+      "name": "Microsoft Phi-3 Mini 4K Instruct",
+      "type": "pay_as_you_go",
+      "provider": "Microsoft",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.13,
+        "cache_miss": 0.13,
+        "output": 0.52
+      },
+      "model_type": "chat",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false,
+      "context_length": 4096
+    },
+    {
+      "id": "microsoft-phi-3-mini-128k-instruct",
+      "name": "Microsoft Phi-3 Mini 128K Instruct",
+      "type": "pay_as_you_go",
+      "provider": "Microsoft",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.13,
+        "cache_miss": 0.13,
+        "output": 0.52
+      },
+      "model_type": "chat",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false,
+      "context_length": 131072
+    },
+    {
+      "id": "microsoft-phi-3-5-mini-instruct",
+      "name": "Microsoft Phi-3.5 Mini Instruct",
+      "type": "pay_as_you_go",
+      "provider": "Microsoft",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.13,
+        "cache_miss": 0.13,
+        "output": 0.52
+      },
+      "model_type": "chat",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false,
+      "context_length": 131072
+    },
+    {
+      "id": "microsoft-phi-3-small-8k-instruct",
+      "name": "Microsoft Phi-3 Small 8K Instruct",
+      "type": "pay_as_you_go",
+      "provider": "Microsoft",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.15,
+        "cache_miss": 0.15,
+        "output": 0.6
+      },
+      "model_type": "chat",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false,
+      "context_length": 8192
+    },
+    {
+      "id": "microsoft-phi-3-small-128k-instruct",
+      "name": "Microsoft Phi-3 Small 128K Instruct",
+      "type": "pay_as_you_go",
+      "provider": "Microsoft",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.15,
+        "cache_miss": 0.15,
+        "output": 0.6
+      },
+      "model_type": "chat",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false,
+      "context_length": 131072
+    },
+    {
+      "id": "microsoft-phi-3-medium-4k-instruct",
+      "name": "Microsoft Phi-3 Medium 4K Instruct",
+      "type": "pay_as_you_go",
+      "provider": "Microsoft",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.17,
+        "cache_miss": 0.17,
+        "output": 0.68
+      },
+      "model_type": "chat",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false,
+      "context_length": 4096
+    },
+    {
+      "id": "microsoft-phi-3-medium-128k-instruct",
+      "name": "Microsoft Phi-3 Medium 128K Instruct",
+      "type": "pay_as_you_go",
+      "provider": "Microsoft",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.17,
+        "cache_miss": 0.17,
+        "output": 0.68
+      },
+      "model_type": "chat",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false,
+      "context_length": 131072
+    },
+    {
+      "id": "microsoft-phi-3-5-moe-instruct",
+      "name": "Microsoft Phi-3.5 MoE Instruct",
+      "type": "pay_as_you_go",
+      "provider": "Microsoft",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.16,
+        "cache_miss": 0.16,
+        "output": 0.64
+      },
+      "model_type": "chat",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false,
+      "context_length": 131072
+    },
+    {
+      "id": "microsoft-phi-3-5-vision-128k-instruct",
+      "name": "Microsoft Phi-3.5 Vision 128K Instruct",
+      "type": "pay_as_you_go",
+      "provider": "Microsoft",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.13,
+        "cache_miss": 0.13,
+        "output": 0.52
+      },
+      "model_type": "vision",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false,
+      "context_length": 131072
+    },
+    {
+      "id": "microsoft-phi-4",
+      "name": "Microsoft Phi-4",
+      "type": "pay_as_you_go",
+      "provider": "Microsoft",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.125,
+        "cache_miss": 0.125,
+        "output": 0.5
+      },
+      "model_type": "chat",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false,
+      "context_length": 131072
+    },
+    {
+      "id": "microsoft-phi-4-mini",
+      "name": "Microsoft Phi-4 Mini",
+      "type": "pay_as_you_go",
+      "provider": "Microsoft",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.075,
+        "cache_miss": 0.075,
+        "output": 0.3
+      },
+      "model_type": "chat",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false,
+      "context_length": 131072
+    },
+    {
+      "id": "microsoft-phi-4-multimodal",
+      "name": "Microsoft Phi-4 Multimodal",
+      "type": "pay_as_you_go",
+      "provider": "Microsoft",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.08,
+        "cache_miss": 0.08,
+        "output": 0.32
+      },
+      "model_type": "multimodal",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false,
+      "context_length": 131072
+    },
+    {
+      "id": "microsoft-phi-4-mini-reasoning",
+      "name": "Microsoft Phi-4 Mini Reasoning",
+      "type": "pay_as_you_go",
+      "provider": "Microsoft",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.075,
+        "cache_miss": 0.075,
+        "output": 0.3
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "context_length": 131072
+    },
+    {
+      "id": "microsoft-phi-4-reasoning",
+      "name": "Microsoft Phi-4 Reasoning",
+      "type": "pay_as_you_go",
+      "provider": "Microsoft",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.125,
+        "cache_miss": 0.125,
+        "output": 0.5
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "context_length": 32768
+    },
+    {
+      "id": "microsoft-phi-4-reasoning-plus",
+      "name": "Microsoft Phi-4 Reasoning Plus",
+      "type": "pay_as_you_go",
+      "provider": "Microsoft",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.125,
+        "cache_miss": 0.125,
+        "output": 0.5
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "context_length": 32768
+    }
+  ]
+}

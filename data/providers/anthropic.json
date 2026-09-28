@@ -1,0 +1,20 @@
+{
+  "slug": "anthropic",
+  "provider": "Anthropic",
+  "source_url": "https://www.anthropic.com/pricing",
+  "last_updated": "2026-09-27",
+  "models": [
+    {
+      "id": "anthropic-claude-3.5-sonnet",
+      "name": "Anthropic Claude 3.5 Sonnet",
+      "type": "pay_as_you_go",
+      "provider": "Anthropic",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.3,
+        "cache_miss": 3,
+        "output": 15
+      }
+    }
+  ]
+}

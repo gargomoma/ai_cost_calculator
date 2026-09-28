@@ -1,0 +1,103 @@
+{
+  "currency_rates": {
+    "USD_TO_CNY": 7.15
+  },
+  "last_updated": "2026-09-28",
+  "providers": [
+    {
+      "slug": "amazon",
+      "file": "providers/amazon.json",
+      "count": 5
+    },
+    {
+      "slug": "ant-group",
+      "file": "providers/ant-group.json",
+      "count": 3
+    },
+    {
+      "slug": "anthropic",
+      "file": "providers/anthropic.json",
+      "count": 1
+    },
+    {
+      "slug": "cohere",
+      "file": "providers/cohere.json",
+      "count": 6
+    },
+    {
+      "slug": "deepseek",
+      "file": "providers/deepseek.json",
+      "count": 4
+    },
+    {
+      "slug": "google",
+      "file": "providers/google.json",
+      "count": 2
+    },
+    {
+      "slug": "inception",
+      "file": "providers/inception.json",
+      "count": 2
+    },
+    {
+      "slug": "meta",
+      "file": "providers/meta.json",
+      "count": 5
+    },
+    {
+      "slug": "microsoft",
+      "file": "providers/microsoft.json",
+      "count": 15
+    },
+    {
+      "slug": "mimo",
+      "file": "providers/mimo.json",
+      "count": 5
+    },
+    {
+      "slug": "minimax",
+      "file": "providers/minimax.json",
+      "count": 3
+    },
+    {
+      "slug": "mistralai",
+      "file": "providers/mistralai.json",
+      "count": 7
+    },
+    {
+      "slug": "moonshotai",
+      "file": "providers/moonshotai.json",
+      "count": 4
+    },
+    {
+      "slug": "ollama",
+      "file": "providers/ollama.json",
+      "count": 5
+    },
+    {
+      "slug": "openai",
+      "file": "providers/openai.json",
+      "count": 42
+    },
+    {
+      "slug": "opencode-go",
+      "file": "providers/opencode-go.json",
+      "count": 44
+    },
+    {
+      "slug": "qwen",
+      "file": "providers/qwen.json",
+      "count": 36
+    },
+    {
+      "slug": "x-ai",
+      "file": "providers/x-ai.json",
+      "count": 8
+    },
+    {
+      "slug": "z-ai",
+      "file": "providers/z-ai.json",
+      "count": 2
+    }
+  ]
+}

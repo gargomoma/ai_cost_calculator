@@ -1,0 +1,35 @@
+{
+  "slug": "minimax",
+  "provider": "MiniMax",
+  "source_url": "https://platform.minimax.io/",
+  "last_updated": "2026-09-27",
+  "models": [
+    {
+      "id": "minimax-token-plan-max",
+      "name": "MiniMax Token Plan (Max Plan)",
+      "type": "fixed_quota_subscription",
+      "provider": "MiniMax",
+      "price_usd": 50,
+      "tier_name": "Max Plan",
+      "monthly_token_quota": 5100000000
+    },
+    {
+      "id": "minimax-token-plan-plus",
+      "name": "MiniMax Token Plan (Plus Plan)",
+      "type": "fixed_quota_subscription",
+      "provider": "MiniMax",
+      "price_usd": 20,
+      "tier_name": "Plus Plan",
+      "monthly_token_quota": 1700000000
+    },
+    {
+      "id": "minimax-token-plan-starter",
+      "name": "MiniMax Token Plan (Starter Plan)",
+      "type": "fixed_quota_subscription",
+      "provider": "MiniMax",
+      "price_usd": 10,
+      "tier_name": "Starter Plan",
+      "monthly_token_quota": 800000000
+    }
+  ]
+}

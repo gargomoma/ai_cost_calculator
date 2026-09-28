@@ -1,0 +1,848 @@
+{
+  "slug": "openai",
+  "provider": "OpenAI",
+  "source_url": "https://platform.openai.com/docs/pricing",
+  "last_updated": "2026-09-28",
+  "models": [
+    {
+      "id": "openai-gpt-6-astra",
+      "name": "OpenAI gpt-6-astra",
+      "type": "pay_as_you_go",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 1,
+        "cache_miss": 10,
+        "output": 50
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true
+    },
+    {
+      "id": "openai-gpt-6-sol",
+      "name": "OpenAI gpt-6-sol",
+      "type": "pay_as_you_go",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.2,
+        "cache_miss": 2,
+        "output": 10
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true
+    },
+    {
+      "id": "openai-gpt-6-luna",
+      "name": "OpenAI gpt-6-luna",
+      "type": "pay_as_you_go",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.01,
+        "cache_miss": 0.1,
+        "output": 0.5
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true
+    },
+    {
+      "id": "openai-gpt-5-6-sol",
+      "name": "OpenAI gpt-5.6-sol",
+      "type": "pay_as_you_go",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.4,
+        "cache_miss": 4,
+        "output": 20
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true
+    },
+    {
+      "id": "openai-gpt-5-6-terra",
+      "name": "OpenAI gpt-5.6-terra",
+      "type": "pay_as_you_go",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.2,
+        "cache_miss": 2,
+        "output": 12
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true
+    },
+    {
+      "id": "openai-gpt-5-6-luna",
+      "name": "OpenAI gpt-5.6-luna",
+      "type": "pay_as_you_go",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.02,
+        "cache_miss": 0.2,
+        "output": 1.2
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true
+    },
+    {
+      "id": "openai-gpt-5-5",
+      "name": "OpenAI gpt-5.5",
+      "type": "pay_as_you_go",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.5,
+        "cache_miss": 5,
+        "output": 30
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true
+    },
+    {
+      "id": "openai-gpt-5-5-pro",
+      "name": "OpenAI gpt-5.5-pro",
+      "type": "pay_as_you_go",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 30,
+        "cache_miss": 30,
+        "output": 180
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true
+    },
+    {
+      "id": "openai-gpt-5-4",
+      "name": "OpenAI gpt-5.4",
+      "type": "pay_as_you_go",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.25,
+        "cache_miss": 2.5,
+        "output": 15
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true
+    },
+    {
+      "id": "openai-gpt-5-4-mini",
+      "name": "OpenAI gpt-5.4-mini",
+      "type": "pay_as_you_go",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.075,
+        "cache_miss": 0.75,
+        "output": 4.5
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true
+    },
+    {
+      "id": "openai-gpt-5-4-nano",
+      "name": "OpenAI gpt-5.4-nano",
+      "type": "pay_as_you_go",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.02,
+        "cache_miss": 0.2,
+        "output": 1.25
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true
+    },
+    {
+      "id": "openai-gpt-5-4-pro",
+      "name": "OpenAI gpt-5.4-pro",
+      "type": "pay_as_you_go",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 30,
+        "cache_miss": 30,
+        "output": 180
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true
+    },
+    {
+      "id": "openai-gpt-5-2",
+      "name": "OpenAI gpt-5.2",
+      "type": "pay_as_you_go",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.175,
+        "cache_miss": 1.75,
+        "output": 14
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true
+    },
+    {
+      "id": "openai-gpt-5-2-pro",
+      "name": "OpenAI gpt-5.2-pro",
+      "type": "pay_as_you_go",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 21,
+        "cache_miss": 21,
+        "output": 168
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true
+    },
+    {
+      "id": "openai-gpt-5-1",
+      "name": "OpenAI gpt-5.1",
+      "type": "pay_as_you_go",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.125,
+        "cache_miss": 1.25,
+        "output": 10
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true
+    },
+    {
+      "id": "openai-gpt-5",
+      "name": "OpenAI gpt-5",
+      "type": "pay_as_you_go",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.125,
+        "cache_miss": 1.25,
+        "output": 10
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true
+    },
+    {
+      "id": "openai-gpt-5-mini",
+      "name": "OpenAI gpt-5-mini",
+      "type": "pay_as_you_go",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.025,
+        "cache_miss": 0.25,
+        "output": 2
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true
+    },
+    {
+      "id": "openai-gpt-5-nano",
+      "name": "OpenAI gpt-5-nano",
+      "type": "pay_as_you_go",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.005,
+        "cache_miss": 0.05,
+        "output": 0.4
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true
+    },
+    {
+      "id": "openai-gpt-5-pro",
+      "name": "OpenAI gpt-5-pro",
+      "type": "pay_as_you_go",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 15,
+        "cache_miss": 15,
+        "output": 120
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true
+    },
+    {
+      "id": "openai-gpt-4-1",
+      "name": "OpenAI gpt-4.1",
+      "type": "pay_as_you_go",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.5,
+        "cache_miss": 2,
+        "output": 8
+      },
+      "model_type": "chat",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false
+    },
+    {
+      "id": "openai-gpt-4-1-mini",
+      "name": "OpenAI gpt-4.1-mini",
+      "type": "pay_as_you_go",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.1,
+        "cache_miss": 0.4,
+        "output": 1.6
+      },
+      "model_type": "chat",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false
+    },
+    {
+      "id": "openai-gpt-4-1-nano",
+      "name": "OpenAI gpt-4.1-nano",
+      "type": "pay_as_you_go",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.025,
+        "cache_miss": 0.1,
+        "output": 0.4
+      },
+      "model_type": "chat",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false
+    },
+    {
+      "id": "openai-gpt-4o",
+      "name": "OpenAI gpt-4o",
+      "type": "pay_as_you_go",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 1.25,
+        "cache_miss": 2.5,
+        "output": 10
+      },
+      "model_type": "chat",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false
+    },
+    {
+      "id": "openai-gpt-4o-2024-05-13",
+      "name": "OpenAI gpt-4o-2024-05-13",
+      "type": "pay_as_you_go",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 5,
+        "cache_miss": 5,
+        "output": 15
+      },
+      "model_type": "chat",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false
+    },
+    {
+      "id": "openai-gpt-4o-mini",
+      "name": "OpenAI gpt-4o-mini",
+      "type": "pay_as_you_go",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.075,
+        "cache_miss": 0.15,
+        "output": 0.6
+      },
+      "model_type": "chat",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false
+    },
+    {
+      "id": "openai-o1",
+      "name": "OpenAI o1",
+      "type": "pay_as_you_go",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 7.5,
+        "cache_miss": 15,
+        "output": 60
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true
+    },
+    {
+      "id": "openai-o1-pro",
+      "name": "OpenAI o1-pro",
+      "type": "pay_as_you_go",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 150,
+        "cache_miss": 150,
+        "output": 600
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true
+    },
+    {
+      "id": "openai-o3-pro",
+      "name": "OpenAI o3-pro",
+      "type": "pay_as_you_go",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 20,
+        "cache_miss": 20,
+        "output": 80
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true
+    },
+    {
+      "id": "openai-o3",
+      "name": "OpenAI o3",
+      "type": "pay_as_you_go",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.5,
+        "cache_miss": 2,
+        "output": 8
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true
+    },
+    {
+      "id": "openai-o4-mini",
+      "name": "OpenAI o4-mini",
+      "type": "pay_as_you_go",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.275,
+        "cache_miss": 1.1,
+        "output": 4.4
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true
+    },
+    {
+      "id": "openai-o3-mini",
+      "name": "OpenAI o3-mini",
+      "type": "pay_as_you_go",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.55,
+        "cache_miss": 1.1,
+        "output": 4.4
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true
+    },
+    {
+      "id": "openai-gpt-4-turbo-2024-04-09",
+      "name": "OpenAI gpt-4-turbo-2024-04-09",
+      "type": "pay_as_you_go",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 10,
+        "cache_miss": 10,
+        "output": 30
+      },
+      "model_type": "chat",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false
+    },
+    {
+      "id": "openai-gpt-4-0613",
+      "name": "OpenAI gpt-4-0613",
+      "type": "pay_as_you_go",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 30,
+        "cache_miss": 30,
+        "output": 60
+      },
+      "model_type": "chat",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false
+    },
+    {
+      "id": "openai-gpt-3-5-turbo",
+      "name": "OpenAI gpt-3.5-turbo",
+      "type": "pay_as_you_go",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.5,
+        "cache_miss": 0.5,
+        "output": 1.5
+      },
+      "model_type": "chat",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false
+    },
+    {
+      "id": "openai-gpt-3-5-turbo-0125",
+      "name": "OpenAI gpt-3.5-turbo-0125",
+      "type": "pay_as_you_go",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.5,
+        "cache_miss": 0.5,
+        "output": 1.5
+      },
+      "model_type": "chat",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false
+    },
+    {
+      "id": "openai-gpt-3-5-turbo-1106",
+      "name": "OpenAI gpt-3.5-turbo-1106",
+      "type": "pay_as_you_go",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 1,
+        "cache_miss": 1,
+        "output": 2
+      },
+      "model_type": "chat",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false
+    },
+    {
+      "id": "openai-gpt-3-5-turbo-instruct",
+      "name": "OpenAI gpt-3.5-turbo-instruct",
+      "type": "pay_as_you_go",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 1.5,
+        "cache_miss": 1.5,
+        "output": 2
+      },
+      "model_type": "chat",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false
+    },
+    {
+      "id": "openai-davinci-002",
+      "name": "OpenAI davinci-002",
+      "type": "pay_as_you_go",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 2,
+        "cache_miss": 2,
+        "output": 2
+      },
+      "model_type": "chat",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false
+    },
+    {
+      "id": "openai-babbage-002",
+      "name": "OpenAI babbage-002",
+      "type": "pay_as_you_go",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.4,
+        "cache_miss": 0.4,
+        "output": 0.4
+      },
+      "model_type": "chat",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false
+    },
+    {
+      "id": "openai-chat-latest",
+      "name": "OpenAI chat-latest",
+      "type": "pay_as_you_go",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.5,
+        "cache_miss": 5,
+        "output": 30
+      },
+      "model_type": "chat",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false
+    },
+    {
+      "id": "openai-gpt-5-3-codex",
+      "name": "OpenAI gpt-5.3-codex",
+      "type": "pay_as_you_go",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.175,
+        "cache_miss": 1.75,
+        "output": 14
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true
+    },
+    {
+      "id": "openai-gpt-5-search-api",
+      "name": "OpenAI gpt-5-search-api",
+      "type": "pay_as_you_go",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.125,
+        "cache_miss": 1.25,
+        "output": 10
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true
+    }
+  ]
+}

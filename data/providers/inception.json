@@ -1,0 +1,54 @@
+{
+  "slug": "inception",
+  "provider": "Inception",
+  "source_url": "https://docs.inceptionlabs.ai/get-started/models",
+  "last_updated": "2026-09-28",
+  "models": [
+    {
+      "id": "inception-mercury-2-5",
+      "name": "Inception Mercury 2.5",
+      "type": "pay_as_you_go",
+      "provider": "Inception",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.02,
+        "cache_miss": 0.2,
+        "output": 0.75
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "context_length": 260000,
+      "promo": {
+        "discount_pct": 80,
+        "label": "80% off Mercury 2.5"
+      }
+    },
+    {
+      "id": "inception-mercury-2",
+      "name": "Inception Mercury 2",
+      "type": "pay_as_you_go",
+      "provider": "Inception",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.025,
+        "cache_miss": 0.25,
+        "output": 0.75
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "context_length": 128000
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "slug": "moonshotai",
+  "provider": "Moonshot AI",
+  "source_url": "https://platform.moonshot.ai/docs/pricing/chat",
+  "last_updated": "2026-09-28",
+  "models": [
+    {
+      "id": "moonshotai-kimi-k3",
+      "name": "Moonshot Kimi K3",
+      "type": "pay_as_you_go",
+      "provider": "Moonshot AI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.3,
+        "cache_miss": 3,
+        "output": 15
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "context_length": 1048576
+    },
+    {
+      "id": "moonshotai-kimi-k2-7-code",
+      "name": "Moonshot Kimi K2.7 Code",
+      "type": "pay_as_you_go",
+      "provider": "Moonshot AI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.19,
+        "cache_miss": 0.95,
+        "output": 4
+      },
+      "model_type": "chat",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false,
+      "context_length": 262144
+    },
+    {
+      "id": "moonshotai-kimi-k2-7-code-highspeed",
+      "name": "Moonshot Kimi K2.7 Code HighSpeed",
+      "type": "pay_as_you_go",
+      "provider": "Moonshot AI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.38,
+        "cache_miss": 1.9,
+        "output": 8
+      },
+      "model_type": "chat",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false,
+      "context_length": 262144
+    },
+    {
+      "id": "moonshotai-kimi-k2-6",
+      "name": "Moonshot Kimi K2.6",
+      "type": "pay_as_you_go",
+      "provider": "Moonshot AI",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.16,
+        "cache_miss": 0.95,
+        "output": 4
+      },
+      "model_type": "chat",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": false,
+      "context_length": 262144
+    }
+  ]
+}

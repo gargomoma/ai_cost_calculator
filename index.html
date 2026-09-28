@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Cost Calculator · Calculadora de Costes IA</title>
+<meta name="description" content="Monthly LLM token cost projection & platform comparison. Proyección mensual de costes de tokens LLM.">
+<link rel="stylesheet" href="css/styles.css">
+<script>window.tailwind=window.tailwind||{};window.tailwind.config={darkMode:'class',theme:{extend:{colors:{brand:{500:'#3b82f6',600:'#2563eb'}}}}};</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen flex flex-col custom-scrollbar">
+<header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur static sm:sticky top-0 z-30">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 flex flex-col md:flex-row items-center justify-between gap-3 sm:gap-4">
+    <div class="flex items-center space-x-3">
+      <div class="p-2.5 bg-gradient-to-tr from-blue-600 to-indigo-600 rounded-xl shadow-lg shadow-blue-500/20"><i class="fa-solid fa-calculator text-white text-xl"></i></div>
+      <div>
+        <h1 class="text-lg sm:text-xl font-bold text-white tracking-tight flex flex-wrap items-center gap-2">AI Cost Calculator <span id="app-version-badge" class="text-xs font-normal px-2 py-0.5 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">v1.0.0 · Catalog 2026-09-28</span></h1>
+        <p class="text-xs text-slate-400" data-i18n="app.subtitle">Proyección mensual de consumo de tokens y comparativa de plataformas</p>
+      </div>
+    </div>
+    <div class="flex items-center gap-2 flex-wrap">
+      <div class="flex items-center bg-slate-800 p-1 rounded-lg border border-slate-700 text-xs" role="group" aria-label="Language">
+        <button id="btn-lang-es" onclick="app.setLang('es')" class="px-2 py-1 min-h-[44px] min-w-[44px] rounded-md">ES</button>
+        <button id="btn-lang-en" onclick="app.setLang('en')" class="px-2 py-1 min-h-[44px] min-w-[44px] rounded-md">EN</button>
+      </div>
+      <button onclick="app.resetAll()" class="px-3 py-1.5 min-h-[44px] text-xs font-medium rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700"><i class="fa-solid fa-rotate-left"></i> <span data-i18n="btn.reset">Restablecer Datos</span></button>
+    </div>
+  </div>
+</header>
+<main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
+  <div class="bg-slate-800/80 border border-slate-700/60 rounded-xl p-5 space-y-4">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-700/60 pb-3">
+      <button onclick="app.toggleInputPanel()" class="flex items-center gap-2 text-left" data-i18n-title="panel.toggleTitle" title="Mostrar / ocultar">
+        <i id="input-panel-chevron" class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform"></i>
+        <i class="fa-solid fa-pen-to-square text-blue-400"></i><h2 class="font-semibold" data-i18n="panel.title">Configuración de Consumo e Inputs</h2>
+      </button>
+      <div class="flex flex-wrap items-center bg-slate-900/80 p-1 rounded-lg border border-slate-700/60 text-xs gap-1 w-full sm:w-auto">
+        <button id="btn-mode-logs" onclick="app.setMode('logs')" class="px-3 py-1 min-h-[44px] rounded-md bg-blue-600 text-white"><i class="fa-solid fa-list-check mr-1"></i><span data-i18n="mode.logs">Logs Históricos por Día</span></button>
+        <button id="btn-mode-direct" onclick="app.setMode('direct')" class="px-3 py-1 min-h-[44px] rounded-md text-slate-400"><i class="fa-solid fa-sliders mr-1"></i><span data-i18n="mode.direct">Total Directo Estimado</span></button>
+        <button onclick="app.openImportLogsModal()" class="px-3 py-1 min-h-[44px] rounded-md bg-blue-500/10 text-blue-400 border border-blue-500/30"><i class="fa-solid fa-file-import"></i> <span data-i18n="btn.import">Importar JSON</span></button>
+      </div>
+    </div>
+    <p id="input-panel-summary" class="hidden text-xs text-slate-400 font-mono break-words"></p>
+    <div id="input-panel-body" class="space-y-4">
+    <div id="panel-mode-logs" class="space-y-3">
+      <div class="flex flex-wrap items-center justify-between gap-2 text-xs text-slate-400"><p data-i18n="logs.hint">Introduce registros · se escala a 30 días.</p><div class="flex items-center gap-2"><span>USD/CNY:</span><input type="number" id="cny-rate-input" step="0.01" value="7.15" onchange="app.updateCnyRate(this.value)" class="w-20 bg-slate-900 border border-slate-700 rounded px-2 py-2 min-h-[44px] text-[16px] sm:text-xs text-center text-white"></div></div>
+    <div class="overflow-x-auto rounded-lg border border-slate-700/60"><table class="w-full text-left text-xs text-slate-300">
+        <thead class="bg-slate-900/80 text-slate-400 uppercase text-[10px] border-b border-slate-700/60"><tr><th class="p-2.5" data-i18n="logs.date">Fecha</th><th class="p-2.5">Cache Hit</th><th class="p-2.5">Cache Miss</th><th class="p-2.5">Output</th><th class="p-2.5 text-right" data-i18n="logs.subtotal">Subtotal</th><th class="p-2.5 text-center" data-i18n="logs.action">Acción</th></tr></thead>
+        <tbody id="logs-table-body" class="divide-y divide-slate-700/40"></tbody>
+        <tfoot class="bg-slate-900/60 border-t border-slate-700/60"><tr><td class="p-2.5"><span data-i18n="logs.totals">Totales</span> (<span id="logs-count">0</span>)</td><td class="p-2.5 text-emerald-400" id="foot-hit-sum">0</td><td class="p-2.5 text-blue-400" id="foot-miss-sum">0</td><td class="p-2.5 text-purple-400" id="foot-out-sum">0</td><td class="p-2.5 text-right text-amber-400" id="foot-total-sum">0</td><td class="p-2.5 text-center"><button onclick="app.addLogRow()" class="px-2.5 py-1 min-h-[44px] text-[11px] bg-blue-600 text-white rounded"><i class="fa-solid fa-plus mr-1"></i><span data-i18n="logs.addDay">Día</span></button></td></tr></tfoot>
+      </table></div>
+    </div>
+    <div id="panel-mode-direct" class="hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div><label class="text-xs" data-i18n="direct.days">Días Muestra</label><input type="number" id="direct-days" value="30" min="1" max="365" oninput="app.recalculate()" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2.5 min-h-[44px] text-[16px] sm:text-sm"></div>
+      <div><label class="text-xs text-emerald-400">Cache Hit</label><input type="number" id="direct-hit" value="900000000" oninput="app.recalculate()" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2.5 min-h-[44px] text-[16px] sm:text-sm"></div>
+      <div><label class="text-xs text-blue-400">Cache Miss</label><input type="number" id="direct-miss" value="30000000" oninput="app.recalculate()" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2.5 min-h-[44px] text-[16px] sm:text-sm"></div>
+      <div><label class="text-xs text-purple-400">Output</label><input type="number" id="direct-output" value="15000000" oninput="app.recalculate()" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2.5 min-h-[44px] text-[16px] sm:text-sm"></div>
+    </div>
+    </div>
+  </div>
+  <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+    <div class="bg-slate-800/80 border border-slate-700/60 rounded-xl p-4 flex items-center justify-between"><div class="min-w-0"><p class="text-xs text-slate-400 uppercase" data-i18n="metric.total">Tokens Totales (30d)</p><h3 id="metric-total-tokens" class="text-xl sm:text-2xl font-bold mt-1">0</h3><p id="metric-daily-avg" class="text-xs text-slate-400">0</p></div><div class="p-3 shrink-0 bg-blue-500/10 text-blue-400 rounded-lg"><i class="fa-solid fa-cubes text-xl"></i></div></div>
+    <div class="bg-slate-800/80 border border-slate-700/60 rounded-xl p-4 flex items-center justify-between"><div class="min-w-0"><p class="text-xs text-slate-400 uppercase" data-i18n="metric.cache">Ratio Cache Hit</p><h3 id="metric-cache-hit-ratio" class="text-xl sm:text-2xl font-bold text-emerald-400 mt-1">0%</h3><p id="metric-cache-hit-total" class="text-xs text-slate-400">0</p></div><div class="p-3 shrink-0 bg-emerald-500/10 text-emerald-400 rounded-lg"><i class="fa-solid fa-bolt text-xl"></i></div></div>
+    <div class="bg-slate-800/80 border border-slate-700/60 rounded-xl p-4 flex items-center justify-between"><div class="min-w-0"><p class="text-xs text-slate-400 uppercase" data-i18n="metric.cheapest">Opción PAYG Más Barata</p><h3 id="metric-cheapest-payg" class="text-xl sm:text-2xl font-bold text-cyan-400 mt-1">$0.00</h3><p id="metric-cheapest-payg-name" class="text-xs text-slate-400 truncate max-w-[150px]">—</p></div><div class="p-3 shrink-0 bg-cyan-500/10 text-cyan-400 rounded-lg"><i class="fa-solid fa-tag text-xl"></i></div></div>
+    <div class="bg-slate-800/80 border border-slate-700/60 rounded-xl p-4 flex items-center justify-between"><div class="min-w-0"><p class="text-xs text-slate-400 uppercase" data-i18n="metric.bestsub">Suscripción Óptima</p><h3 id="metric-best-sub" class="text-xl sm:text-2xl font-bold text-indigo-400 mt-1">$0.00</h3><p id="metric-best-sub-name" class="text-xs text-slate-400 truncate max-w-[150px]">—</p></div><div class="p-3 shrink-0 bg-indigo-500/10 text-indigo-400 rounded-lg"><i class="fa-solid fa-award text-xl"></i></div></div>
+  </div>
+  <div class="bg-slate-800/80 border border-slate-700/60 rounded-xl p-5">
+    <details open>
+      <summary class="flex items-center justify-between gap-2 border-b border-slate-700/60 pb-3 cursor-pointer list-none">
+        <span class="flex items-center gap-2"><i class="fa-solid fa-chart-column text-indigo-400"></i><span class="font-semibold" data-i18n="chart.title">Comparativa Visual de Coste Mensual ($ USD)</span></span>
+        <span class="flex items-center gap-2 shrink-0"><span class="text-xs text-slate-400 hidden sm:inline" data-i18n="chart.subtitle">Ordenado de menor a mayor</span><i class="fa-solid fa-chevron-down text-slate-500 text-xs"></i></span>
+      </summary>
+      <div class="h-72 sm:h-80 pt-4"><canvas id="costChart"></canvas></div>
+    </details>
+  </div>
+  <div class="bg-slate-800/80 border border-slate-700/60 rounded-xl px-5 py-3 flex flex-wrap items-center gap-x-4 gap-y-2">
+    <span class="flex items-center gap-2"><i class="fa-solid fa-layer-group text-slate-400"></i><span class="font-semibold text-sm" data-i18n="extras.title">Extras</span></span>
+    <span class="flex flex-wrap gap-2 sm:ml-auto">
+      <button onclick="app.openCatalogModal()" class="px-3 py-1.5 min-h-[44px] text-xs font-medium rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700"><i class="fa-solid fa-sliders"></i> <span data-i18n="btn.catalog">Catálogo y Tarifas</span></button>
+      <button onclick="app.openOpenRouterModal()" class="px-3 py-1.5 min-h-[44px] text-xs font-medium rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700"><i class="fa-solid fa-cloud-arrow-down"></i> <span data-i18n="btn.openrouter">OpenRouter Live</span></button>
+    </span>
+  </div>
+  <div class="bg-slate-800/80 border border-slate-700/60 rounded-xl p-5 space-y-4">
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-700/60 pb-3">
+      <div class="flex items-center gap-2"><i class="fa-solid fa-table text-cyan-400"></i><h2 class="font-semibold" data-i18n="results.title">Resultados</h2></div>
+      <div class="flex flex-wrap items-center gap-3 text-xs w-full md:w-auto">
+        <button onclick="app.clearColumnFilters()" class="px-2.5 py-1.5 min-h-[44px] rounded-lg bg-slate-900 border border-slate-700 text-slate-300 hover:text-white" data-i18n-title="filter.clearTitle" title="Limpiar filtros"><i class="fa-solid fa-filter-circle-xmark mr-1"></i><span data-i18n="filter.clear">Limpiar</span></button>
+        <button onclick="app.exportCSV()" class="px-3 py-1.5 min-h-[44px] text-xs font-medium rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white"><i class="fa-solid fa-file-csv"></i> <span data-i18n="btn.export">Exportar CSV</span></button>
+        <button onclick="app.shareLink()" class="px-3 py-1.5 min-h-[44px] text-xs font-medium rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700"><i class="fa-solid fa-link"></i> <span data-i18n="btn.share">Share your results</span></button>
+      </div>
+    </div>
+    <details id="mobile-filters" class="md:hidden border border-slate-700/60 rounded-xl bg-slate-900/60">
+      <summary class="cursor-pointer px-3 py-2.5 min-h-[44px] flex items-center gap-2 text-xs text-slate-300"><i class="fa-solid fa-filter text-slate-500"></i><span data-i18n="filter.title">Filtros</span><span id="mfilter-count" class="text-blue-400 font-mono"></span></summary>
+      <div class="px-3 pb-3 grid grid-cols-1 gap-2">
+        <select id="m-filter-provider" onchange="app.filterResults()" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2 py-2.5 min-h-[44px] text-xs text-slate-200"><option value="">—</option></select>
+        <input id="m-filter-model" oninput="app.filterResults()" data-i18n-ph="filter.modelPh" placeholder="Filtrar modelo..." class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2 py-2.5 min-h-[44px] text-base text-slate-200">
+        <select id="m-modality-filter" onchange="app.filterResults()" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2 py-2.5 min-h-[44px] text-xs text-slate-200"><option value="ALL" data-i18n="filter.all">Todas las Modalidades</option><option value="pay_as_you_go">Pay-As-You-Go</option><option value="credit_subscription" data-i18n="filter.credit">Suscripción Créditos</option><option value="fixed_quota_subscription" data-i18n="filter.fixed">Cuota Fija</option><option value="hybrid_monetary_subscription" data-i18n="filter.hybrid">Híbrida</option></select>
+        <label class="flex items-center gap-1.5 cursor-pointer py-2 min-h-[44px]"><input type="checkbox" id="m-hide-insufficient" onchange="app.filterResults()" class="rounded bg-slate-950 border-slate-700 w-5 h-5"><span data-i18n="filter.hide" class="text-xs text-slate-200">Ocultar Insuficientes</span></label>
+      </div>
+    </details>
+    <div class="overflow-auto rounded-lg border border-slate-700/60 max-h-[72vh] hidden md:block"><table id="results-table" class="w-full min-w-[900px] md:min-w-0 text-left text-xs text-slate-300">
+      <thead class="bg-slate-900/90 text-slate-400 uppercase text-[10px] border-b border-slate-700/60"><tr>
+        <th class="p-3 cursor-pointer normal-case select-none" onclick="app.sortBy('provider')" onkeydown="if(event.key==='Enter')app.sortBy('provider')" tabindex="0" role="button"><span data-i18n="table.provider">Proveedor</span> <i class="fa-solid fa-sort text-[9px] ml-0.5"></i></th>
+        <th class="p-3 cursor-pointer normal-case select-none" onclick="app.sortBy('name')" onkeydown="if(event.key==='Enter')app.sortBy('name')" tabindex="0" role="button"><span data-i18n="table.model">Modelo</span> <i class="fa-solid fa-sort text-[9px] ml-0.5"></i></th>
+        <th class="p-3 normal-case" data-i18n="table.modality">Modalidad</th>
+        <th class="p-3 cursor-pointer text-right select-none" onclick="app.sortBy('cost')" onkeydown="if(event.key==='Enter')app.sortBy('cost')" tabindex="0" role="button" data-i18n="table.cost">Coste Mensual</th>
+        <th class="p-3 text-center" data-i18n="table.usage">% Uso</th>
+        <th class="p-3" data-i18n="table.plan">Plan</th>
+        <th class="p-3" data-i18n="table.consumption">Consumo</th>
+        <th class="p-3" data-i18n="table.notes">Notas</th>
+      </tr>
+      <tr class="normal-case">
+        <th class="p-2 font-normal"><select id="filter-provider" onchange="app.filterResults()" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2 py-2.5 min-h-[44px] text-xs sm:text-[11px] sm:min-h-0 sm:py-1.5 text-slate-200 font-normal"><option value="">—</option></select></th>
+        <th class="p-2 font-normal"><input id="filter-model" oninput="app.filterResults()" data-i18n-ph="filter.modelPh" placeholder="Filtrar modelo..." class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2 py-2.5 min-h-[44px] text-base sm:text-[11px] sm:min-h-0 sm:py-1.5 text-slate-200 font-normal"></th>
+        <th class="p-2 font-normal"><select id="modality-filter" onchange="app.filterResults()" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2 py-2.5 min-h-[44px] text-xs sm:text-[11px] sm:min-h-0 sm:py-1.5 text-slate-200 font-normal"><option value="ALL" data-i18n="filter.all">Todas las Modalidades</option><option value="pay_as_you_go">Pay-As-You-Go</option><option value="credit_subscription" data-i18n="filter.credit">Suscripción Créditos</option><option value="fixed_quota_subscription" data-i18n="filter.fixed">Cuota Fija</option><option value="hybrid_monetary_subscription" data-i18n="filter.hybrid">Híbrida</option></select></th>
+        <th class="p-2"></th>
+        <th class="p-2 font-normal text-center"><label class="flex items-center justify-center gap-1.5 cursor-pointer normal-case" data-i18n-title="filter.hide" title="Ocultar Insuficientes"><input type="checkbox" id="hide-insufficient" onchange="app.filterResults()" class="rounded bg-slate-950 border-slate-700"><span data-i18n="filter.hide" class="text-[11px] text-slate-200">Ocultar Insuficientes</span></label></th>
+        <th class="p-2" colspan="3"></th>
+      </tr></thead>
+      <tbody id="results-table-body" class="divide-y divide-slate-700/40"></tbody>
+    </table></div>
+    <div id="results-cards" class="md:hidden space-y-3"></div>
+  </div>
+</main>
+<div id="catalog-modal" class="fixed inset-0 bg-slate-950/80 z-50 hidden items-center justify-center p-3 sm:p-4" style="display:none"><div class="bg-slate-900 border border-slate-700 rounded-xl max-w-3xl w-full max-h-[92dvh] flex flex-col overflow-hidden">
+  <div class="p-4 border-b border-slate-800 flex justify-between"><h3 class="font-bold" data-i18n="modal.catalogTitle">Catálogo JSON</h3><button onclick="app.closeCatalogModal()"><i class="fa-solid fa-xmark"></i></button></div>
+  <div class="p-4 flex-1 overflow-y-auto"><p class="text-xs text-slate-400 mb-2" data-i18n="modal.catalogHint">Edita tarifas · se guarda en localStorage. Para cambio permanente edita <code>data/providers/*.json</code>.</p><textarea id="catalog-json-input" rows="10" class="w-full bg-slate-950 font-mono text-[11px] sm:text-xs text-emerald-400 border border-slate-800 rounded-lg p-3"></textarea></div>
+  <div class="p-4 border-t border-slate-800 flex justify-end gap-2"><button onclick="app.closeCatalogModal()" class="px-4 py-2 text-xs bg-slate-800 rounded-lg" data-i18n="modal.cancel">Cancelar</button><button onclick="app.saveCatalogModal()" class="px-4 py-2 text-xs bg-blue-600 rounded-lg" data-i18n="modal.save">Guardar</button></div>
+</div></div>
+<div id="import-logs-modal" class="fixed inset-0 bg-slate-950/80 z-50 hidden items-center justify-center p-3 sm:p-4" style="display:none"><div class="bg-slate-900 border border-slate-700 rounded-xl max-w-xl w-full max-h-[92dvh] flex flex-col overflow-hidden">
+  <div class="p-4 border-b border-slate-800 flex justify-between"><h3 class="font-bold" data-i18n="modal.importTitle">Importar JSON</h3><button onclick="app.closeImportLogsModal()"><i class="fa-solid fa-xmark"></i></button></div>
+  <div class="p-4 space-y-4 text-xs overflow-y-auto custom-scrollbar">
+    <details class="border border-slate-800 rounded-lg">
+      <summary class="cursor-pointer px-3 py-2 text-slate-300 hover:text-white" data-i18n="prompt.title">¿Tus datos están en otro formato? Despliega y copia este prompt</summary>
+      <div class="px-3 pb-3 space-y-2">
+        <pre id="import-prompt-text" class="whitespace-pre-wrap font-mono text-[11px] text-emerald-400 bg-slate-950 border border-slate-800 rounded-lg p-2 max-h-56 overflow-y-auto custom-scrollbar"></pre>
+        <button onclick="app.copyImportPrompt()" class="px-3 py-1.5 text-[11px] bg-slate-800 hover:bg-slate-700 rounded-lg"><i class="fa-solid fa-copy mr-1"></i><span data-i18n="prompt.copy">Copiar prompt</span></button>
+      </div>
+    </details>
+    <input type="file" id="logs-file-input" accept=".json" onchange="app.handleLogsFileUpload(event)" class="w-full"><textarea id="import-json-text" rows="8" class="w-full bg-slate-950 font-mono text-xs text-emerald-400 border border-slate-800 rounded-lg p-3"></textarea></div>
+  <div class="p-4 border-t border-slate-800 flex justify-end gap-2"><button onclick="app.closeImportLogsModal()" class="px-4 py-2 text-xs bg-slate-800 rounded-lg" data-i18n="modal.cancel">Cancelar</button><button onclick="app.importLogsFromJSON()" class="px-4 py-2 text-xs bg-blue-600 rounded-lg" data-i18n="modal.importBtn">Importar</button></div>
+</div></div>
+<div id="openrouter-modal" class="fixed inset-0 bg-slate-950/80 z-50 hidden items-center justify-center p-3 sm:p-4" style="display:none"><div class="bg-slate-900 border border-slate-700 rounded-xl max-w-2xl w-full max-h-[92dvh] flex flex-col overflow-hidden">
+  <div class="p-4 border-b border-slate-800 flex justify-between items-center"><h3 class="font-bold" data-i18n="or.title">OpenRouter Live · Importar modelos</h3><button onclick="app.closeOpenRouterModal()"><i class="fa-solid fa-xmark"></i></button></div>
+  <div class="p-4 space-y-3 text-xs text-slate-300 overflow-y-auto custom-scrollbar">
+    <p class="text-slate-400" data-i18n="or.hint">Descarga la lista live de OpenRouter y conviértela al catálogo (pay-as-you-go). Los modelos importados reemplazan los anteriores con id openrouter-*. Nada se envía a ningún servidor: todo ocurre en tu navegador.</p>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+      <div><label class="block text-slate-400 mb-1" data-i18n="or.minContext">Min context (K)</label><input id="or-min-context" type="number" value="256" min="0" step="1" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-2 py-2.5 min-h-[44px] text-[16px] sm:text-xs"></div>
+      <div><label class="block text-slate-400 mb-1" data-i18n="or.minParams">Min params (B)</label><input id="or-min-params" type="number" value="27" min="0" step="0.5" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-2 py-2.5 min-h-[44px] text-[16px] sm:text-xs"></div>
+      <div><label class="block text-slate-400 mb-1" data-i18n="or.minOutput">Min output $/1M</label><input id="or-min-output" type="number" value="0" min="0" step="0.01" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-2 py-2.5 min-h-[44px] text-[16px] sm:text-xs"></div>
+    </div>
+    <div><label class="block text-slate-400 mb-1" data-i18n="or.author">Filtrar por autor/nombre (opcional)</label><input id="or-author" placeholder="deepseek, qwen, meta..." class="w-full bg-slate-900 border border-slate-700 rounded-lg px-2 py-2.5 min-h-[44px] text-[16px] sm:text-xs"></div>
+    <div class="flex flex-wrap gap-x-4 gap-y-2">
+      <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" id="or-reasoning" class="rounded bg-slate-900 border-slate-700"><span data-i18n="or.reasoning">Solo reasoning</span></label>
+      <span class="flex items-center gap-1">
+        <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" id="or-biglabs" class="rounded bg-slate-900 border-slate-700"><span data-i18n="or.biglabs">Solo big labs</span></label>
+        <span class="relative group inline-flex">
+          <button type="button" class="w-11 h-11 sm:w-4 sm:h-4 text-[10px] leading-none rounded-full border border-slate-600 text-slate-400 hover:text-white hover:border-slate-400 cursor-help inline-flex items-center justify-center">?</button>
+          <span id="or-tip-biglabs" class="opacity-0 invisible group-hover:opacity-100 group-hover:visible focus-within:opacity-100 focus-within:visible absolute bottom-full mb-2 left-0 w-64 p-2 bg-slate-950 border border-slate-700 rounded-lg shadow-2xl text-[11px] font-normal text-slate-300 z-50 pointer-events-none transition-opacity"></span>
+        </span>
+      </span>
+      <span class="flex items-center gap-1">
+        <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" id="or-dropsmall" class="rounded bg-slate-900 border-slate-700"><span data-i18n="or.dropsmall">Excluir pequeños por nombre</span></label>
+        <span class="relative group inline-flex">
+          <button type="button" class="w-11 h-11 sm:w-4 sm:h-4 text-[10px] leading-none rounded-full border border-slate-600 text-slate-400 hover:text-white hover:border-slate-400 cursor-help inline-flex items-center justify-center">?</button>
+          <span id="or-tip-dropsmall" class="opacity-0 invisible group-hover:opacity-100 group-hover:visible focus-within:opacity-100 focus-within:visible absolute bottom-full mb-2 left-0 w-64 p-2 bg-slate-950 border border-slate-700 rounded-lg shadow-2xl text-[11px] font-normal text-slate-300 z-50 pointer-events-none transition-opacity"></span>
+        </span>
+      </span>
+      <span class="flex items-center gap-1">
+        <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" id="or-replace" checked class="rounded bg-slate-900 border-slate-700"><span data-i18n="or.replace">Reemplazar importados previos</span></label>
+        <span class="relative group inline-flex">
+          <button type="button" class="w-11 h-11 sm:w-4 sm:h-4 text-[10px] leading-none rounded-full border border-slate-600 text-slate-400 hover:text-white hover:border-slate-400 cursor-help inline-flex items-center justify-center">?</button>
+          <span class="opacity-0 invisible group-hover:opacity-100 group-hover:visible focus-within:opacity-100 focus-within:visible absolute bottom-full mb-2 right-0 w-64 p-2 bg-slate-950 border border-slate-700 rounded-lg shadow-2xl text-[11px] font-normal text-slate-300 z-50 pointer-events-none transition-opacity" data-i18n="or.replaceHint">Reemplazar borra los modelos openrouter-* anteriores antes de añadir los nuevos. Sin marcar, los nuevos se añaden a los existentes.</span>
+        </span>
+      </span>
+    </div>
+    <div><label class="block text-slate-400 mb-1" data-i18n="or.paste">…o pega el JSON del API (fallback sin CORS)</label><textarea id="or-paste" rows="4" placeholder='{"data":{"models":[...]}}' class="w-full bg-slate-950 font-mono text-[11px] text-emerald-400 border border-slate-800 rounded-lg p-2"></textarea></div>
+    <p id="or-status" class="text-slate-400"></p>
+  </div>
+  <div class="p-4 border-t border-slate-800 flex justify-end gap-2"><button onclick="app.closeOpenRouterModal()" class="px-4 py-2 text-xs bg-slate-800 rounded-lg" data-i18n="modal.cancel">Cancelar</button><button onclick="app.fetchOpenRouter()" class="px-4 py-2 text-xs bg-blue-600 rounded-lg"><i class="fa-solid fa-cloud-arrow-down mr-1"></i><span data-i18n="or.fetch">Descargar y aplicar</span></button></div>
+</div></div>
+<div id="toast" class="fixed bottom-5 right-5 left-5 sm:left-auto sm:max-w-sm bg-slate-800 border border-slate-700 px-4 py-3 rounded-lg text-xs flex items-center gap-2 opacity-0 pointer-events-none z-[60] mb-[env(safe-area-inset-bottom)]"><i id="toast-icon" class="fa-solid fa-circle-info text-blue-400"></i><span id="toast-msg"></span></div>
+<footer class="border-t border-slate-800 bg-slate-950 py-4 text-center text-xs text-slate-500"><span data-i18n="footer">Calculadora de Costes IA</span><span id="catalog-meta"></span> · <a class="underline" href="https://github.com/gargomoma/ai_cost_calculator" target="_blank" rel="noopener">GitHub</a></footer>
+<script>
+(function(){const fix=(id)=>{const m=document.getElementById(id);if(!m)return;new MutationObserver(()=>{m.style.display=m.classList.contains('hidden')?'none':'flex';}).observe(m,{attributes:true,attributeFilter:['class']});};fix('catalog-modal');fix('import-logs-modal');fix('openrouter-modal');})();
+</script>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

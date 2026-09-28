@@ -1,0 +1,123 @@
+{
+  "slug": "ollama",
+  "provider": "Ollama API",
+  "source_url": "https://ollama.com/",
+  "last_updated": "2026-09-27",
+  "models": [
+    {
+      "id": "ollama-deepseek-v4-flash",
+      "name": "Ollama: DeepSeek V4 Flash",
+      "type": "hybrid_monetary_subscription",
+      "provider": "Ollama API",
+      "currency": "USD",
+      "subscription_price_usd": 20,
+      "included_dollars": 60,
+      "pricing_per_1m": {
+        "cache_hit": 0.007,
+        "cache_miss": 0.22,
+        "output": 0.66
+      },
+      "model_type": "reasoning",
+      "context_length": 1048576,
+      "params_b": null,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "deepseek/deepseek-v4-flash"
+    },
+    {
+      "id": "ollama-deepseek-v4-pro",
+      "name": "Ollama: DeepSeek V4 Pro",
+      "type": "hybrid_monetary_subscription",
+      "provider": "Ollama API",
+      "currency": "USD",
+      "subscription_price_usd": 20,
+      "included_dollars": 60,
+      "pricing_per_1m": {
+        "cache_hit": 0.022,
+        "cache_miss": 0.66,
+        "output": 1.98
+      },
+      "model_type": "reasoning",
+      "context_length": 1048576,
+      "params_b": null,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "deepseek/deepseek-v4-pro"
+    },
+    {
+      "id": "ollama-glm-5.3",
+      "name": "Ollama: GLM 5.3",
+      "type": "hybrid_monetary_subscription",
+      "provider": "Ollama API",
+      "currency": "USD",
+      "subscription_price_usd": 20,
+      "included_dollars": 60,
+      "pricing_per_1m": {
+        "cache_hit": 0.26,
+        "cache_miss": 1.4,
+        "output": 4.4
+      },
+      "note": "Ollama Pro Plan ($20/m gives $60 credits)"
+    },
+    {
+      "id": "ollama-gpt-oss-120b",
+      "name": "Ollama: GPT-OSS 120B",
+      "type": "hybrid_monetary_subscription",
+      "provider": "Ollama API",
+      "currency": "USD",
+      "subscription_price_usd": 20,
+      "included_dollars": 60,
+      "pricing_per_1m": {
+        "cache_hit": 0.014,
+        "cache_miss": 0.15,
+        "output": 0.6
+      },
+      "model_type": "reasoning",
+      "context_length": 131072,
+      "params_b": 120,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "openai/gpt-oss-120b"
+    },
+    {
+      "id": "ollama-minimax-m2.7",
+      "name": "Ollama: MiniMax M2.7",
+      "type": "hybrid_monetary_subscription",
+      "provider": "Ollama API",
+      "currency": "USD",
+      "subscription_price_usd": 20,
+      "included_dollars": 60,
+      "pricing_per_1m": {
+        "cache_hit": 0.06,
+        "cache_miss": 0.3,
+        "output": 1.2
+      },
+      "model_type": "reasoning",
+      "context_length": 204800,
+      "params_b": null,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "or_slug": "minimax/minimax-m2.7"
+    }
+  ]
+}

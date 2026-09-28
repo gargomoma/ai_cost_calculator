@@ -1,0 +1,133 @@
+{
+  "slug": "meta",
+  "provider": "Meta",
+  "source_url": "https://dev.meta.ai/docs/pricing-rate-limits",
+  "last_updated": "2026-09-28",
+  "models": [
+    {
+      "id": "meta-muse-spark-1-3",
+      "name": "Meta Muse Spark 1.3",
+      "type": "pay_as_you_go",
+      "provider": "Meta",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.15,
+        "cache_miss": 1.25,
+        "output": 4.25
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text",
+        "image",
+        "video",
+        "audio",
+        "pdf"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "context_length": 1048576
+    },
+    {
+      "id": "meta-muse-spark-1-2",
+      "name": "Meta Muse Spark 1.2",
+      "type": "pay_as_you_go",
+      "provider": "Meta",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.15,
+        "cache_miss": 1.25,
+        "output": 4.25
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text",
+        "image",
+        "video",
+        "audio",
+        "pdf"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "context_length": 1048576
+    },
+    {
+      "id": "meta-muse-spark-1-1",
+      "name": "Meta Muse Spark 1.1",
+      "type": "pay_as_you_go",
+      "provider": "Meta",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.15,
+        "cache_miss": 1.25,
+        "output": 4.25
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text",
+        "image",
+        "video",
+        "audio",
+        "pdf"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "context_length": 1048576
+    },
+    {
+      "id": "meta-muse-spark-1-3-contributor",
+      "name": "Meta Muse Spark 1.3 (Contributor)",
+      "type": "pay_as_you_go",
+      "provider": "Meta",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.002,
+        "cache_miss": 0.1,
+        "output": 0.2
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text",
+        "image",
+        "video",
+        "audio",
+        "pdf"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "context_length": 1048576
+    },
+    {
+      "id": "meta-muse-spark-1-2-contributor",
+      "name": "Meta Muse Spark 1.2 (Contributor)",
+      "type": "pay_as_you_go",
+      "provider": "Meta",
+      "currency": "USD",
+      "pricing_per_1m": {
+        "cache_hit": 0.002,
+        "cache_miss": 0.1,
+        "output": 0.2
+      },
+      "model_type": "reasoning",
+      "input_modalities": [
+        "text",
+        "image",
+        "video",
+        "audio",
+        "pdf"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_reasoning": true,
+      "context_length": 1048576
+    }
+  ]
+}
